@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header" "navigation section" "footer footer";
+  -ms-grid-columns: 30% auto;
+  grid-template-columns: 30% auto;
+  -ms-grid-rows: 6% auto 6%;
+  grid-template-rows: 6% auto 6%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  background-color: #760000;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: #760000;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: navigation;
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 30px;
+  background-color: #251f1c;
+  border-right: 2px solid rgba(118, 0, 0, 0.5);
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: section;
+  height: 100vh;
+  overflow: scroll;
+  padding-bottom: 35px;
+  background-color: #251f1c;
+}
+
+h1 {
+  font-family: "Frank Ruhl Libre";
+  color: #ece5e2;
+  font-size: calc(20px + 1.09375vw);
+  margin: 20px;
+}
+
+h2 {
+  font-family: "Frank Ruhl Libre";
+  color: #ece5e2;
+  font-size: calc(18px + 0.9375vw);
+  margin: 10px 20px;
+}
+
+h2:target {
+  background-color: #760000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 50px;
+  border-radius: 2px;
+}
+
+h3 {
+  font-family: "Roboto";
+  color: #ece5e2;
+  font-size: calc(16px + 0.625vw);
+  border-top: 1px solid rgba(118, 0, 0, 0.5);
+  padding: 10px 25px;
+}
+
+h3:hover {
+  background-color: #760000;
+  cursor: pointer;
+}
+
+p {
+  font-family: "Roboto";
+  color: #ece5e2;
+  font-size: calc(12px + 0.3125vw);
+  letter-spacing: 0.05em;
+  line-height: 1.7em;
+  margin: 0 20px;
+}
